@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
 import WordToGuess from '../containers/WordToGuess'
+import SendBox from '../containers/SendBox'
 import {newGuess} from '../actions/game'
 
 class GamePage extends Component {
@@ -12,6 +13,7 @@ class GamePage extends Component {
             <h1 className="App-title">Hang-inThere-man</h1>
             </header></Link>
             <WordToGuess />
+            <SendBox />
         </div>
     )
   }

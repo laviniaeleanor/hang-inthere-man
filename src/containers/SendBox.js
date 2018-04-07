@@ -1,10 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import wordToGuess from '../reducers/wordToGuess'
-import { showGuess } from '../lib/game'
-import guesses from '../reducers/guesses'
+// import { showGuess } from '../lib/game'
 
-import React, {PureComponent} from 'react'
 
 class SendBox extends PureComponent {
 	state = {}
@@ -25,10 +22,10 @@ class SendBox extends PureComponent {
 	render() {
 		const initialValues = this.props.initialValues || {}
 		return (
-			<form onSubmit={this.handleSubmit}>
+			<form className = "SendBox" onSubmit={this.handleSubmit}>
 				<div>
 					<h2>Choose a letter</h2>
-					<input name="letter" id="letter" value={
+					<input name="letter" id="letter" maxLength="1" value={
 						this.state.letter || initialValues.letter || ''
 					} onChange={ this.handleChange } />
 				</div>
