@@ -1,9 +1,13 @@
 
 // import { connect } from 'react-redux'
 
+
 // Step 1
 
-function wrongGuessCount(word, guesses) {
+
+// console.log(word);
+
+export function wrongGuessCount(word, guesses) {
   let wrongGuesses = 0;
   guesses.forEach(function (guess) {
     if (word.indexOf(guess) !== -1)
@@ -15,22 +19,26 @@ function wrongGuessCount(word, guesses) {
   return wrongGuesses;
 }
 
+
 // console.log('test wrong guesses: ', wrongGuessCount('hello', ['e', 'd', 'x', 'o']) === 2);
 
 
 
 // Step 2
 
-function showGuess(word, guesses) {
-console.log(guesses);
-let string = word.split('')
-.map(function(element) {
+export function showGuess(word, guesses) {
+// console.log(guesses);
+let string = word.toString()
+.split('')
+// console.log(string)
+let newString = string.map(function(element) {
   if (guesses.indexOf(element) !== -1) return element
   return element = "_"
 })
-console.log(string.join(" "))
-  return string.join(" ")
+console.log(newString.join(" "))
+  return newString.join(" ")
 }
+
 
 console.log('test show guess 1:', showGuess('hello', ['l']) === '_ _ l l _');
 console.log('test show guess 2:', showGuess('hello', ['l', 'a', 'e']) === '_ e l l _');
@@ -39,7 +47,7 @@ console.log('test show guess 2:', showGuess('hello', ['l', 'a', 'e']) === '_ e l
 //  Step 3
 
 
-function isWinner(word, guesses) {
+export function isWinner(word, guesses) {
     let win;
     let string = showGuess(word, guesses);
     if (string.indexOf("_") === -1) {
@@ -50,6 +58,8 @@ function isWinner(word, guesses) {
         return win
     }
 }
+
+
 
 
 // console.log('test winner 1:', !isWinner('hello', ['e', 'x']))
@@ -69,10 +79,10 @@ function next(word, guesses) {
   if(isWinner(word,guesses)) {
     console.log('Yayy! You won!');
   }
-  rl.question('next letter? ', answer => {
-      console.log('player wrote:', answer)
-      guesses.push(answer);
-      next(word,guesses);// do something with answer
-  })
+  // rl.question('next letter? ', answer => {
+  //     console.log('player wrote:', answer)
+  //     guesses.push(answer);
+  //     next(word,guesses);// do something with answer
+  // })
 }
-next('hello', [])
+// next('hello', [])
