@@ -10,7 +10,7 @@ const initialState = showGuess(word, guesses)
 export default (state = initialState, action) => {
   switch (action.type) {
     case NEW_GUESS :
-        const newState = showGuess(word, action.payload.guesses )
+        const newState = showGuess(word, action.payload.guesses)
         return newState
 
     default :
