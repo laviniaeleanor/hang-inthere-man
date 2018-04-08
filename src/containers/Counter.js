@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react'
-// import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 export class Counter extends PureComponent {
@@ -15,10 +14,10 @@ export class Counter extends PureComponent {
   }
 }
 
-// At the bottom of the file, where you connect your component:
-const mapStateToProps = ({ counter }) => ({ counter })
+function mapStateToProps(state) {
+    return {
+        counter: state.counter
+    }
+}
 
-
-
-// Then pass it to connect:
 export default connect(mapStateToProps)(Counter)

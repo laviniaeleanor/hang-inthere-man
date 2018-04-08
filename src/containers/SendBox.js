@@ -2,7 +2,17 @@ import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 
 class SendBox extends PureComponent {
-    state = {}
+    constructor(props){
+        super(props);
+        this.state = {value: ""}
+
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    newGuess(guesses) {
+        this.props.dispatch({type: "NEW_GUESS", payload: this.state.value})
+    }
 
 	handleSubmit = (e) => {
 		e.preventDefault()
@@ -16,7 +26,6 @@ class SendBox extends PureComponent {
       [name]: value
     })
 
-    console.log(this.state.guesses)
   }
 
 	render() {

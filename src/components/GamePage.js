@@ -7,8 +7,8 @@ import Counter from '../containers/Counter'
 import {newGuess} from '../actions/game'
 
 class GamePage extends Component {
-    newGuess = (product) => {
-    this.props.newGuess(product)
+    newGuess = (guesses) => {
+    this.props.newGuess(guesses)
   }
 
 

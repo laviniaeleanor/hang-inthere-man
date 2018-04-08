@@ -1,6 +1,5 @@
 import { NEW_GUESS } from '../actions/game'
 import { showGuess } from '../lib/game'
-// import guesses from './guesses'
 
 
 const wordBank = ["pig", "cat", "hotel", "game", "hangman", "banana", "sos"]

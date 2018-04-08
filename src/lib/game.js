@@ -1,11 +1,4 @@
-
-// import { connect } from 'react-redux'
-
-
 // Step 1
-
-
-// console.log(word);
 
 export function wrongGuessCount(word, guesses) {
   let wrongGuesses = 0;
@@ -19,7 +12,6 @@ export function wrongGuessCount(word, guesses) {
   return wrongGuesses;
 }
 
-
 // console.log('test wrong guesses: ', wrongGuessCount('hello', ['e', 'd', 'x', 'o']) === 2);
 
 
@@ -27,21 +19,18 @@ export function wrongGuessCount(word, guesses) {
 // Step 2
 
 export function showGuess(word, guesses) {
-// console.log(guesses);
 let string = word.toString()
 .split('')
-// console.log(string)
 let newString = string.map(function(element) {
   if (guesses.indexOf(element) !== -1) return element
   return element = "_"
 })
-// console.log(newString.join(" "))
   return newString.join(" ")
 }
 
 
-console.log('test show guess 1:', showGuess('hello', ['l']) === '_ _ l l _');
-console.log('test show guess 2:', showGuess('hello', ['l', 'a', 'e']) === '_ e l l _');
+// console.log('test show guess 1:', showGuess('hello', ['l']) === '_ _ l l _');
+// console.log('test show guess 2:', showGuess('hello', ['l', 'a', 'e']) === '_ e l l _');
 
 
 //  Step 3
