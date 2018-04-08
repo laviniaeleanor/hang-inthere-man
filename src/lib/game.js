@@ -35,7 +35,7 @@ let newString = string.map(function(element) {
   if (guesses.indexOf(element) !== -1) return element
   return element = "_"
 })
-console.log(newString.join(" "))
+// console.log(newString.join(" "))
   return newString.join(" ")
 }
 
@@ -68,21 +68,37 @@ export function isWinner(word, guesses) {
 
 // Step 4
 
-function next(word, guesses) {
-  showGuess(word,guesses)
-
-  if(wrongGuessCount(word,guesses) === 6){
-    console.log('You lost.  Boohoo!');
-    ;
+// function next(word, guesses) {
+//   showGuess(word,guesses)
 //
-  };
-  if(isWinner(word,guesses)) {
-    console.log('Yayy! You won!');
-  }
+//   if(wrongGuessCount(word,guesses) === 6){
+//     console.log('You lost.  Boohoo!');
+//     ;
+// //
+//   };
+//   if(isWinner(word,guesses)) {
+//     console.log('Yayy! You won!');
+//   }
   // rl.question('next letter? ', answer => {
   //     console.log('player wrote:', answer)
   //     guesses.push(answer);
   //     next(word,guesses);// do something with answer
   // })
-}
+// }
 // next('hello', [])
+
+
+
+//
+// export function newGuess(letter) {
+//     const updatedGuesses = this.state.guesses.push(letter)
+//     showGuess(this.state.word, updatedGuesses)
+//     if(wrongGuessCount(this.state.word, updatedGuesses) === 6){
+//         console.log('You lost.  Boohoo!');
+//     }
+//     if(isWinner(word,guesses)) {
+//             console.log('Yayy! You won!');
+//         }
+//
+//
+// }

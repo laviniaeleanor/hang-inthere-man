@@ -34,17 +34,6 @@ h3 {
     margin-top: 200px;
 }
 
-#singleLetter {
-    font-size: 80px;
-    margin-top: 80px;
-
-}
-
-#wordToGuess {
-    font-size: 80px;
-    margin-top: 80px;
-}
-
 a {
     text-decoration: none;
 }
@@ -58,16 +47,16 @@ a {
 }
 
 .WordToGuess {
-    border: solid #FFF;
+    /* border: solid #FFF; */
 }
 
 .SendBox {
-    border: solid #FFF;
+    /* border: solid #FFF; */
     align-items: center;
     display: block;
 }
 
-#letter {
+#guesses {
     background-color: #FFF;
     border: none;
     color: #000;
@@ -81,9 +70,32 @@ a {
     text-align: center;
     width: 10%;
     text-transform: uppercase;
-    display: inline-block;
+    display: inline;
     text-align: center;
     margin-left: 45%;
     margin-right: 45%;
 
+}
+
+#goButton {
+    border-radius: 50%;
+    background-color: Transparent;
+    font-family: 'Crayon';
+    font-weight: lighter;
+    font-size: 24px;
+    padding: 25px;
+    border: 2px solid #FFF;
+    color: #FFF;
+    display: inline;
+    text-align: center;
+    margin-left: 45%;
+    margin-right: 45%;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+#goButton:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
 }

@@ -1,10 +1,8 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-// import { showGuess } from '../lib/game'
-
 
 class SendBox extends PureComponent {
-	state = {}
+    state = {}
 
 	handleSubmit = (e) => {
 		e.preventDefault()
@@ -12,34 +10,36 @@ class SendBox extends PureComponent {
 	}
 
 	handleChange = (event) => {
-		const {name, value} = event.target
+    const {name, value} = event.target
 
-		this.setState({
-		  [name]: value
-		})
-	}
+    this.setState({
+      [name]: value
+    })
+
+    console.log(this.state.guesses)
+  }
 
 	render() {
-		const initialValues = this.props.initialValues || {}
 		return (
+            <div>
 			<form className = "SendBox" onSubmit={this.handleSubmit}>
 				<div>
 					<h2>Choose a letter</h2>
-					<input name="letter" id="letter" maxLength="1" value={
-						this.state.letter || initialValues.letter || ''
-					} onChange={ this.handleChange } />
+					<input name="guesses" value={this.state.guesses} type ="text" id="guesses" maxLength="1" onChange={this.handleChange}/>
 				</div>
 
-				<button type="submit">Go!</button>
+				<button id = "goButton" type="submit">Go!</button>
 			</form>
+            <h2>Your guess was: {this.props.wordToGuess}</h2>
+            </div>
 		)
 	}
 }
 
-// At the bottom of the file, where you connect your component:
-const mapStateToProps = ({ sendBox }) => ({ sendBox })
+function mapStateToProps(state) {
+    return {
+        guesses: state.guesses
+    }
+}
 
-
-
-// Then pass it to connect:
 export default connect(mapStateToProps)(SendBox)
