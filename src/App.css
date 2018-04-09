@@ -16,7 +16,7 @@ body {
 }
 
 .WordToGuess {
-    float: left;
+    float: right;
 }
 
 .SendBox {
@@ -87,8 +87,8 @@ a {
     text-transform: uppercase;
     display: inline;
     text-align: center;
-    margin-left: 45%;
-    margin-right: 45%;
+    margin-left: 40%;
+    margin-right: 40%;
 
 }
 
@@ -103,8 +103,9 @@ a {
     color: #FFF;
     display: inline;
     text-align: center;
-    margin-left: 45%;
-    margin-right: 45%;
+    margin-left: 42%;
+    margin-right: 42%;
+    margin-top: 10px;
     cursor: pointer;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
