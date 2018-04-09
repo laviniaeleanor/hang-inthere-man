@@ -18,9 +18,11 @@ class GamePage extends Component {
             <Link to={ `/hangman` }><header className="App-header">
             <h1 className="App-title">Hang-inThere-man</h1>
             </header></Link>
-            <Counter />
+            <div className = "Game">
             <WordToGuess />
-            <SendBox onSubmit={this.newGuess}/>
+            <SendBox onSubmit={this.newGuess} />
+            <Counter />
+            </div>
         </div>
     )
   }

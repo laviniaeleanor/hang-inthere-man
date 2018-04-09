@@ -31,7 +31,7 @@ class SendBox extends PureComponent {
 	render() {
 		return (
             <div>
-			<form className = "SendBox" onSubmit={this.handleSubmit}>
+			<form className = "SendBoxForm" onSubmit={this.handleSubmit}>
 				<div>
 					<h2>Choose a letter</h2>
 					<input name="guesses" value={this.state.guesses} type ="text" id="guesses" maxLength="1" onChange={this.handleChange}/>
@@ -39,7 +39,6 @@ class SendBox extends PureComponent {
 
 				<button id = "goButton" type="submit">Go!</button>
 			</form>
-            <h2>Your guess was: {this.props.wordToGuess}</h2>
             </div>
 		)
 	}

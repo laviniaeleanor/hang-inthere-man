@@ -7,6 +7,21 @@ body {
     background-image: url("./backgound.jpg");
 }
 
+.Game {
+    display:flex;
+}
+
+.Counter {
+    float: right;
+}
+
+.WordToGuess {
+    float: left;
+}
+
+.SendBox {
+    display: flex;
+}
 h1 {
     font-family: 'Crayon';
     color: #FFF;
